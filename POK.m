@@ -1,7 +1,7 @@
 clear;
 close all;
 
-%% implementation of variables
+%% implementation of variables.
 
 syms x y z g 
 
@@ -10,12 +10,12 @@ eq2 = x + y - z + g == 4;
 eq3 = x + y + z + g == 10;
 eq4 = -x + 2*y - z + g == 4;
 
-%% Turning equations in to a matrix and then combining them
+%% Turning equations in to a matrix and then combining them.
 
 [a,b] = equationsToMatrix([eq1, eq2, eq3, eq4], [x, y, z, g]);
 a = [a b];
 
-%% Gauss elimination method
+%% Gauss elimination method.
 
 [m,n]=size(a);
 for j=1:m-1
@@ -38,7 +38,7 @@ for s=m:-1:1
     x(s)=(a(s,n)-c)/a(s,s);
 end
 
-%% Displaying the results
+%% Displaying the results.
 
 disp('Gauss elimination method:');
 a
